@@ -42,6 +42,7 @@ public class TelegramBotUpdatesListener implements UpdatesListener {
     public int process(List<Update> updates) {
         updates.forEach(update -> {
             logger.info("Processing update: {}", update);
+            // заговздка начинается тут
             switch (update.message().text()) {
                 case ("/start"):
                     SendMessage massage = new SendMessage(update.message().chat().id(), "Привет пользователь " +
